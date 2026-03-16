@@ -1,4 +1,6 @@
-n:
+name: Deploy Vite site to GitHub Pages
+
+on:
   push:
     branches:
       - main
