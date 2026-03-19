@@ -1,7 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
 
 const PROJECTS = [
   {
