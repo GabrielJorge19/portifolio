@@ -4,11 +4,6 @@ import { Badge } from '@/components/ui/badge';
 import { Code2, MonitorSmartphone, Cpu } from 'lucide-react';
 import { useLanguages } from '@/context/translationsContext';
 
-const SKILLS = [
-  "HTML5", "CSS3", "JavaScript (ES6+)", "React", "Vue.js", 
-  "TypeScript", "Node.js", "Git", "Webpack", "Vite", 
-  "Sass/SCSS", "Tailwind CSS", "Next.js", "Figma"
-];
 
 export function About() {
 
