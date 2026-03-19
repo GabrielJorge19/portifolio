@@ -1,6 +1,12 @@
+import { useLanguages } from '@/context/translationsContext';
 import { motion } from 'framer-motion';
 
 export function Hero() {
+
+
+  const { translation, profile } = useLanguages();
+
+
   return (
     <section className="relative min-h-screen flex items-center pt-20 pb-32 overflow-hidden">
       {/* Background elements */}
@@ -40,7 +46,7 @@ export function Hero() {
             transition={{ delay: 0.5, duration: 0.8 }}
           >
             <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-xl">
-              Meu nome é <span className="text-white font-medium">Gabriel Jorge</span>, a front-end developer based in Torquay, Devon, UK. I have worked on a wide range of front-end projects, from DJ applications to eCommerce booking platforms, with a focus on creating clean, well-crafted interfaces that not only look great but also perform exceptionally.
+              {translation.hero.title} <span className='text-white font-medium'>{profile.name}</span>, {translation.hero.subtitle}
             </p>
           </motion.div>
 
@@ -54,13 +60,13 @@ export function Hero() {
               href="#projects" 
               className="px-8 py-4 rounded-xl bg-white text-background font-bold hover:bg-gray-200 transition-colors shadow-[0_0_30px_rgba(255,255,255,0.15)] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)]"
             >
-              View My Work
+              {translation.hero.cta}
             </a>
             <a 
               href="#contact" 
               className="px-8 py-4 rounded-xl bg-transparent text-white font-bold border border-white/20 hover:bg-white/5 transition-colors"
             >
-              Contact Me
+              {translation.hero.contactMe}
             </a>
           </motion.div>
         </motion.div>

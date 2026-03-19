@@ -4,8 +4,9 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/Home.tsx";
 import NotFound from "@/pages/not-found";
+import { TranslationsProvider } from "@/context/translationsContext"
 
-const queryClient = new QueryClient(); 
+const queryClient = new QueryClient();
 
 function Router() {
   return (
@@ -20,12 +21,14 @@ function App() {
 
   return (
     <QueryClientProvider client={queryClient}>
-       <TooltipProvider>
-        <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
-          <Router />
-        </WouterRouter>
-         <Toaster />
-       </TooltipProvider>
+      <TooltipProvider>
+        <TranslationsProvider>
+          <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+            <Router />
+          </WouterRouter>
+          <Toaster />
+        </TranslationsProvider>
+      </TooltipProvider>
     </QueryClientProvider>
   );
 }
