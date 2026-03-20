@@ -1,42 +1,11 @@
+import { useLanguages } from '@/context/translationsContext';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
 
-const PROJECTS = [
-  {
-    title: "DJ Booking Platform",
-    description: "A comprehensive booking and management platform for professional DJs. Features include real-time calendar syncing, automated invoicing, and a custom CRM dashboard.",
-    tech: ["React", "Node.js", "MongoDB", "Stripe API"],
-    link: "#",
-    github: "#",
-    color: "from-blue-500 to-cyan-400"
-  },
-  {
-    title: "eCommerce Storefront",
-    description: "High-performance headless eCommerce solution built with Next.js and Shopify. Includes advanced product filtering, cart management, and seamless checkout flow.",
-    tech: ["Next.js", "TypeScript", "Shopify GraphQl", "Tailwind"],
-    link: "#",
-    github: "#",
-    color: "from-purple-500 to-pink-400"
-  },
-  {
-    title: "React Analytics Dashboard",
-    description: "A beautiful, data-dense analytics dashboard for SaaS companies. Visualizes complex metrics using custom D3 charts with a highly responsive grid layout.",
-    tech: ["React", "D3.js", "Framer Motion", "Firebase"],
-    link: "#",
-    github: "#",
-    color: "from-orange-500 to-red-400"
-  },
-  {
-    title: "Developer Portfolio",
-    description: "A minimalist, high-performance personal portfolio website featuring 3D illustrations, smooth scroll animations, and dynamic CSS effects.",
-    tech: ["React", "Vite", "Tailwind CSS", "Three.js"],
-    link: "#",
-    github: "#",
-    color: "from-emerald-400 to-cyan-400"
-  }
-];
-
 export function Projects() {
+
+  const { translation } = useLanguages();
+
   return (
     <section id="projects" className="py-24 relative bg-background">
       <div className="max-w-7xl mx-auto px-6">
@@ -56,7 +25,7 @@ export function Projects() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {PROJECTS.map((project, index) => (
+          {translation.projects.map((project: any, index: any) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
@@ -76,10 +45,10 @@ export function Projects() {
                     {project.title}
                   </h3>
                   <div className="flex gap-3 text-muted-foreground">
-                    <a href={project.github} className="hover:text-white transition-colors">
+                    <a href={project.links.github} className="hover:text-white transition-colors">
                       <Github size={20} />
                     </a>
-                    <a href={project.link} className="hover:text-white transition-colors">
+                    <a href={project.links.website} className="hover:text-white transition-colors">
                       <ExternalLink size={20} />
                     </a>
                   </div>
@@ -92,7 +61,7 @@ export function Projects() {
 
                 {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2 mt-auto">
-                  {project.tech.map((tech) => (
+                  {project.technologies.map((tech: any) => (
                     <span 
                       key={tech} 
                       className="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded border border-primary/20"
