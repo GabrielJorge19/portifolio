@@ -1,8 +1,11 @@
-import { Button } from '@/components/ui/button';
+import { useLanguages } from '@/context/translationsContext';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { Github, Linkedin, Phone } from 'lucide-react';
 
 export function Contact() {
+
+  const { translation, profile } = useLanguages();
+
   return (
     <section id="contact" className="py-32 bg-background relative overflow-hidden">
       {/* Glow Effect */}
@@ -15,42 +18,40 @@ export function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-primary font-mono text-sm tracking-widest uppercase mb-4 block">What's Next?</span>
+          <span className="text-primary font-mono text-sm tracking-widest uppercase mb-4 block">{translation.contact.subtitle}</span>
           <h2 className="text-4xl sm:text-6xl font-display font-bold text-white mb-8">
-            Get In Touch
+            {translation.contact.title}
           </h2>
-          
+
           <p className="text-muted-foreground text-lg mb-12 max-w-xl mx-auto">
-            I'm currently looking for new opportunities. Whether you have a question, a project proposal, or just want to say hi, I'll try my best to get back to you!
+            {translation.contact.text}
           </p>
 
-          <Button 
-            variant="glow" 
-            size="lg" 
-            className="text-lg px-10 py-6"
-            onClick={() => window.location.href = "mailto:hello@example.com"}
-          >
-            Say Hello
-          </Button>
+          <a
+            href={profile.whatsapp}
+            target="_blank"
+            className="px-20 py-5 rounded-full border border-primary/50 text-primary text-2xl font-medium hover:bg-primary hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(59,130,246,0.1)] hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]">
+            {translation.contact.cta}
+          </a>
 
           <div className="mt-20 pt-10 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex gap-6">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href={profile.github} target="_blank" className="text-muted-foreground hover:text-primary transition-colors">
                 <Github size={24} />
                 <span className="sr-only">GitHub</span>
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href={profile.linkedin} target="_blank" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin size={24} />
                 <span className="sr-only">LinkedIn</span>
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Twitter size={24} />
-                <span className="sr-only">Twitter</span>
+              <a href={profile.whatsapp} target="_blank" className="text-muted-foreground hover:text-primary transition-colors">
+                <Phone size={24} />
+                <span className="sr-only">WhatsApp</span>
               </a>
             </div>
-            
+
             <p className="text-sm text-muted-foreground font-mono">
-              Designed & Built by Ian Dunkerley Clone
+              Designed & Built by {profile.name}
             </p>
           </div>
         </motion.div>

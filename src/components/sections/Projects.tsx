@@ -16,16 +16,17 @@ export function Projects() {
           className="mb-16"
         >
           <h2 className="text-3xl sm:text-5xl font-display font-bold text-white mb-4 relative inline-block">
-            Selected Work
-            <span className="absolute -bottom-2 left-0 w-1/2 h-1 bg-primary rounded-full"></span>
+            {translation.projects.title}
+            <span className="absolute -bottom-2 left-0 w-2/3 h-1 bg-primary rounded-full"></span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mt-4">
-            A showcase of some of my recent projects. I've built everything from complex web applications to beautiful marketing sites.
+            
+            {translation.projects.description}
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {translation.projects.map((project: any, index: any) => (
+          {translation.projects.data.map((project: any, index: any) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}

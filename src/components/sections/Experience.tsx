@@ -43,7 +43,7 @@ export function Experience() {
                 <span className="text-primary font-mono text-sm mb-2 block">{exp.period}</span>
                 <h3 className="text-2xl font-bold text-white mb-1">{exp.role}</h3>
                 <h4 className="text-lg font-medium text-gray-400 mb-4">{exp.company}</h4>
-                <div className="glass-panel p-6 rounded-2xl text-muted-foreground w-full">
+                <div className="glass-panel p-6 rounded-2xl text-muted-foreground w-full text-justify">
                   {exp.description}
                 </div>
               </div>

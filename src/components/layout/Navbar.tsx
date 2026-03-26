@@ -11,13 +11,13 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const { translation } = useLanguages();
+  const { translation, profile } = useLanguages();
 
 
   const NAV_LINKS = [
+    { name: translation.nav.home, href: '#hero' },
     { name: translation.nav.about, href: '#about' },
-    { name: translation.nav.skills, href: '#skills' },
-    { name: translation.nav.projects, href: '#projects' },
+    // { name: translation.nav.projects, href: '#projects' },
     { name: translation.nav.experience, href: '#experience' },
     { name: translation.nav.contact, href: '#contact' },
   ];
@@ -39,7 +39,8 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <a href="#" className="text-2xl font-display font-bold text-white relative group">
-          ID<span className="text-primary">.</span>
+          {/* GB<span className="text-primary">.</span> */}
+          <img src="favicon.png" alt="Gabriel Jorge" width={54} height={54} className="mr-2" />
           <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
         </a>
 
@@ -55,7 +56,9 @@ export function Navbar() {
             </a>
           ))}
           <a
-            href="#contact"
+            // href="#contact"
+                        href={profile.whatsapp}
+            target="_blank"
             className="px-5 py-2 rounded-full border border-primary/50 text-primary text-sm font-medium hover:bg-primary hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(59,130,246,0.1)] hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]"
           >
             {translation.nav.cta}

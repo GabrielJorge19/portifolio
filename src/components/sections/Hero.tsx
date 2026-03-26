@@ -8,7 +8,7 @@ export function Hero() {
 
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 pb-32 overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center pt-20 pb-32 overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -56,12 +56,12 @@ export function Hero() {
             transition={{ delay: 0.8, duration: 0.8 }}
             className="flex flex-wrap gap-4 mt-4"
           >
-            <a 
+            {/* <a 
               href="#projects" 
               className="px-8 py-4 rounded-xl bg-white text-background font-bold hover:bg-gray-200 transition-colors shadow-[0_0_30px_rgba(255,255,255,0.15)] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)]"
             >
               {translation.hero.cta}
-            </a>
+            </a> */}
             <a 
               href="#contact" 
               className="px-8 py-4 rounded-xl bg-transparent text-white font-bold border border-white/20 hover:bg-white/5 transition-colors"
