@@ -16,7 +16,7 @@ export function Experience() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-5xl font-display font-bold text-white mb-4">
-            Experience
+            {translation.nav.experience}
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
         </motion.div>

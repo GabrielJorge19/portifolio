@@ -46,12 +46,8 @@ export function Projects() {
                     {project.title}
                   </h3>
                   <div className="flex gap-3 text-muted-foreground">
-                    <a href={project.links.github} className="hover:text-white transition-colors">
-                      <Github size={20} />
-                    </a>
-                    <a href={project.links.website} className="hover:text-white transition-colors">
-                      <ExternalLink size={20} />
-                    </a>
+                    {project.links.github && <a href={project.links.github} className="hover:text-white transition-colors"><Github size={20} /></a>}
+                    {project.links.website && <a href={project.links.website} className="hover:text-white transition-colors"><ExternalLink size={20} /></a>}
                   </div>
                 </div>
 
