@@ -15,11 +15,11 @@ export function Navbar() {
 
 
   const NAV_LINKS = [
-    { name: translation.nav.home, href: '#hero' },
-    { name: translation.nav.about, href: '#about' },
-    // { name: translation.nav.projects, href: '#projects' },
-    { name: translation.nav.experience, href: '#experience' },
-    { name: translation.nav.contact, href: '#contact' },
+    { name: translation.nav.home, href: '/portifolio/#hero' },
+    { name: translation.nav.about, href: '/portifolio/#about' },
+    { name: translation.nav.projects, href: '/portifolio/#projects' },
+    { name: translation.nav.experience, href: '/portifolio/#experience' },
+    { name: translation.nav.contact, href: '/portifolio/#contact' },
   ];
 
 

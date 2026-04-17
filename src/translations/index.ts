@@ -6,7 +6,7 @@ export const translations = {
       about: "Sobre",
       skills: "Habilidades",
       projects: "Projetos",
-      experience: "Experiência",
+      experience: "Experiências",
       contact: "Contato",
       cta: "Diga olá"
     },
@@ -29,6 +29,7 @@ export const translations = {
       description: "Uma mostra de alguns dos meus projetos recentes. Construí tudo desde aplicativos web complexos até sites de marketing incríveis.",
       data: [{
         title: "Automação web",
+        slug: "automacao-web",
         description: "Desenvolvi uma automação para criação de ordens de serviço utilizando JavaScript, FileSystem API e Playwright, otimizando processos repetitivos, reduzindo erros humanos, aumentando eficiência operacional e garantindo rapidez execução das tarefas.",
         technologies: ["javascript", "filesystem", "playwright"],
         links: {
@@ -78,7 +79,7 @@ export const translations = {
       about: "About",
       skills: "Skills",
       projects: "Projects",
-      experience: "Experience",
+      experience: "Experiences",
       contact: "Contact",
       cta: "Say Hello"
     },
@@ -101,6 +102,7 @@ export const translations = {
       description: "A showcase of some of my recent projects. I've built everything from complex web applications to beautiful marketing sites.",
       data: [{
         title: "Automation web",
+        slug: "automacao-web",
         description: "Developed an automation for service order creation using JavaScript, FileSystem API, and Playwright, optimizing repetitive processes, reducing human errors, increasing operational efficiency, and ensuring faster task execution.",
         technologies: ["javascript", "filesystem", "playwright"],
         links: {

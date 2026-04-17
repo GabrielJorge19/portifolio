@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/Home.tsx";
 import NotFound from "@/pages/not-found";
 import { TranslationsProvider } from "@/context/translationsContext"
+import AutomacaoWeb from "./pages/projcts/automacao-web";
 
 const queryClient = new QueryClient();
 
@@ -12,6 +13,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/automacao-web" component={AutomacaoWeb} />
       <Route component={NotFound} />
     </Switch>
   );

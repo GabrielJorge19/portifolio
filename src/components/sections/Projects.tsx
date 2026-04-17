@@ -1,6 +1,7 @@
 import { useLanguages } from '@/context/translationsContext';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, ArrowRight } from 'lucide-react';
+import { Link } from 'wouter';
 
 export function Projects() {
 
@@ -46,6 +47,7 @@ export function Projects() {
                     {project.title}
                   </h3>
                   <div className="flex gap-3 text-muted-foreground">
+                    {project.slug && <Link href={`/${project.slug}`} className="hover:text-white transition-colors"><ArrowRight size={20} /></Link>}
                     {project.links.github && <a href={project.links.github} className="hover:text-white transition-colors"><Github size={20} /></a>}
                     {project.links.website && <a href={project.links.website} className="hover:text-white transition-colors"><ExternalLink size={20} /></a>}
                   </div>
