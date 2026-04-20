@@ -19,7 +19,7 @@ export function Contact() {
           transition={{ duration: 0.6 }}
         >
           <span className="text-primary font-mono text-sm tracking-widest uppercase mb-4 block">{translation.contact.subtitle}</span>
-          <h2 className="text-4xl sm:text-6xl font-display font-bold text-white mb-8">
+          <h2 className="text-4xl sm:text-6xl font-display font-bold text-foreground mb-8">
             {translation.contact.title}
           </h2>
 
@@ -30,7 +30,7 @@ export function Contact() {
           <a
             href={profile.whatsapp}
             target="_blank"
-            className="px-20 py-5 rounded-full border border-primary/50 text-primary text-2xl font-medium hover:bg-primary hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(59,130,246,0.1)] hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]">
+            className="px-20 py-5 rounded-full border border-primary/50 text-primary text-2xl font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-[0_0_15px_rgba(59,130,246,0.1)] hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]">
             {translation.contact.cta}
           </a>
 

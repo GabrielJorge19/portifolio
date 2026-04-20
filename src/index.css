@@ -42,33 +42,30 @@
 }
 
 :root {
-  /* Deep Navy Theme */
+  /* Dark mode palette */
   --background: 226 50% 4%;
   --foreground: 210 40% 98%;
-  
+
   --card: 226 45% 6%;
   --card-foreground: 210 40% 98%;
   --card-border: 226 30% 12%;
-  
+
   --popover: 226 50% 5%;
   --popover-foreground: 210 40% 98%;
   --popover-border: 226 30% 15%;
-  
-  /* Electric Blue Accent */
+
   --primary: 217 91% 60%;
   --primary-foreground: 210 40% 98%;
-  
-  /* Purple/Deep Blue Secondary */
+
   --secondary: 226 40% 12%;
   --secondary-foreground: 210 40% 98%;
-  
+
   --muted: 226 30% 15%;
   --muted-foreground: 215 20% 65%;
-  
-  /* Cyan Accent */
+
   --accent: 190 90% 50%;
   --accent-foreground: 210 40% 98%;
-  
+
   --destructive: 0 84% 60%;
   --destructive-foreground: 210 40% 98%;
 
@@ -76,7 +73,45 @@
   --input: 226 30% 12%;
   --ring: 217 91% 60%;
 
+  --text-outline-stroke: rgba(255, 255, 255, 0.15);
+  --text-outline-stroke-hover: rgba(255, 255, 255, 0.8);
+
   --radius: 0.75rem;
+}
+
+html.light {
+  --background: 210 20% 98%;
+  --foreground: 222 12% 12%;
+
+  --card: 210 16% 96%;
+  --card-foreground: 222 12% 12%;
+  --card-border: 210 18% 85%;
+
+  --popover: 210 16% 97%;
+  --popover-foreground: 222 12% 12%;
+  --popover-border: 210 18% 88%;
+
+  --primary: 217 91% 45%;
+  --primary-foreground: 222 12% 12%;
+
+  --secondary: 252 70% 55%;
+  --secondary-foreground: 222 12% 12%;
+
+  --muted: 210 14% 92%;
+  --muted-foreground: 215 20% 45%;
+
+  --accent: 190 90% 45%;
+  --accent-foreground: 222 12% 12%;
+
+  --destructive: 0 84% 58%;
+  --destructive-foreground: 222 12% 12%;
+
+  --border: 210 18% 85%;
+  --input: 210 18% 95%;
+  --ring: 217 91% 60%;
+
+  --text-outline-stroke: rgba(0, 0, 0, 0.32);
+  --text-outline-stroke-hover: rgba(0, 0, 0, 0.95);
 }
 
 @layer base {
@@ -104,22 +139,22 @@
 @layer utilities {
   .text-outline {
     color: transparent;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
+    -webkit-text-stroke: 1px var(--text-outline-stroke);
     background-clip: text;
   }
   
   .text-outline:hover {
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.8);
+    -webkit-text-stroke: 1px var(--text-outline-stroke-hover);
     color: rgba(255, 255, 255, 0.05);
   }
 
   .text-outline-glow {
     color: transparent;
-    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.9);
+    -webkit-text-stroke: 2px var(--text-outline-stroke-hover);
     filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.5));
   }
 
   .glass-panel {
-    @apply bg-card/40 backdrop-blur-xl border border-white/5 shadow-2xl;
+    @apply bg-card/40 backdrop-blur-xl border border-border/20 shadow-2xl;
   }
 }

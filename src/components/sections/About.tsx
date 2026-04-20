@@ -21,7 +21,7 @@ export function About() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl sm:text-5xl font-display font-bold text-white mb-8 relative inline-block">
+            <h2 className="text-3xl sm:text-5xl font-display font-bold text-foreground mb-8 relative inline-block">
               {translation.about.title}
               <span className="absolute -bottom-2 left-0 w-1/3 h-1 bg-primary rounded-full"></span>
             </h2>
@@ -35,19 +35,19 @@ export function About() {
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
                   <MonitorSmartphone size={24} />
                 </div>
-                <h3 className="text-white font-medium">{translation.about.skills[0]}</h3>
+                <h3 className="text-foreground font-medium">{translation.about.skills[0]}</h3>
               </div>
               <div className="glass-panel p-6 rounded-2xl flex flex-col items-center text-center gap-3">
-                <div className="w-12 h-12 bg-purple-500/10 rounded-full flex items-center justify-center text-purple-400">
+                <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center text-secondary">
                   <Code2 size={24} />
                 </div>
-                <h3 className="text-white font-medium">{translation.about.skills[1]}</h3>
+                <h3 className="text-foreground font-medium">{translation.about.skills[1]}</h3>
               </div>
               <div className="glass-panel p-6 rounded-2xl flex flex-col items-center text-center gap-3">
-                <div className="w-12 h-12 bg-cyan-500/10 rounded-full flex items-center justify-center text-cyan-400">
+                <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center text-accent">
                   <Cpu size={24} />
                 </div>
-                <h3 className="text-white font-medium">{translation.about.skills[2]}</h3>
+                <h3 className="text-foreground font-medium">{translation.about.skills[2]}</h3>
               </div>
             </div>
           </motion.div>
@@ -61,7 +61,7 @@ export function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="glass-panel p-8 sm:p-10 rounded-3xl border border-white/5"
           >
-            <h3 className="text-2xl font-display font-bold text-white mb-8">{translation.about.skillTitle}</h3>
+            <h3 className="text-2xl font-display font-bold text-foreground mb-8">{translation.about.skillTitle}</h3>
             <div className="flex flex-wrap gap-3">
               {[...translation.about.topSkill, ...translation.about.complementarySkills].map((skill: any, index: any) => (
                 <motion.div
@@ -73,7 +73,7 @@ export function About() {
                 >
                   <Badge 
                     variant="default" 
-                    className="text-sm py-2 px-4 bg-white/5 border border-white/10 text-gray-200 hover:bg-primary/20 hover:text-white hover:border-primary/50 transition-all cursor-default"
+                    className="text-sm py-2 px-4 bg-muted/40 border border-border text-muted-foreground hover:bg-primary/20 hover:text-primary-foreground hover:border-primary/50 transition-all cursor-default"
                   >
                     {skill}
                   </Badge>

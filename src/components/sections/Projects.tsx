@@ -16,7 +16,7 @@ export function Projects() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h2 className="text-3xl sm:text-5xl font-display font-bold text-white mb-4 relative inline-block">
+          <h2 className="text-3xl sm:text-5xl font-display font-bold text-foreground mb-4 relative inline-block">
             {translation.projects.title}
             <span className="absolute -bottom-2 left-0 w-2/3 h-1 bg-primary rounded-full"></span>
           </h2>
@@ -43,13 +43,13 @@ export function Projects() {
                 
                 {/* Project Header */}
                 <div className="flex justify-between items-start mb-6">
-                  <h3 className="text-2xl font-display font-bold text-white group-hover:text-primary transition-colors">
+                  <h3 className="text-2xl font-display font-bold text-foreground group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
                   <div className="flex gap-3 text-muted-foreground">
-                    {project.slug && <Link href={`/${project.slug}`} className="hover:text-white transition-colors"><ArrowRight size={20} /></Link>}
-                    {project.links.github && <a href={project.links.github} className="hover:text-white transition-colors"><Github size={20} /></a>}
-                    {project.links.website && <a href={project.links.website} className="hover:text-white transition-colors"><ExternalLink size={20} /></a>}
+                    {project.slug && <Link href={`/${project.slug}`} className="hover:text-primary transition-colors"><ArrowRight size={20} /></Link>}
+                    {project.links.github && <a href={project.links.github} className="hover:text-primary transition-colors"><Github size={20} /></a>}
+                    {project.links.website && <a href={project.links.website} className="hover:text-primary transition-colors"><ExternalLink size={20} /></a>}
                   </div>
                 </div>
 

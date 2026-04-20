@@ -8,14 +8,9 @@ export function Hero() {
 
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center pt-20 pb-32 overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center pt-30 pb-32 overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={`${import.meta.env.BASE_URL}images/bg-mesh.png`} 
-          alt="" 
-          className="w-full h-full object-cover opacity-50 mix-blend-screen"
-        />
         <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/80 to-background" />
       </div>
 
@@ -46,7 +41,7 @@ export function Hero() {
             transition={{ delay: 0.5, duration: 0.8 }}
           >
             <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-xl">
-              {translation.hero.title} <span className='text-white font-medium'>{profile.name}</span>, {translation.hero.subtitle}
+              {translation.hero.title} <span className='text-primary font-medium'>{profile.name}</span>, {translation.hero.subtitle}
             </p>
           </motion.div>
 
@@ -56,15 +51,9 @@ export function Hero() {
             transition={{ delay: 0.8, duration: 0.8 }}
             className="flex flex-wrap gap-4 mt-4"
           >
-            {/* <a 
-              href="#projects" 
-              className="px-8 py-4 rounded-xl bg-white text-background font-bold hover:bg-gray-200 transition-colors shadow-[0_0_30px_rgba(255,255,255,0.15)] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)]"
-            >
-              {translation.hero.cta}
-            </a> */}
             <a 
               href="#contact" 
-              className="px-8 py-4 rounded-xl bg-transparent text-white font-bold border border-white/20 hover:bg-white/5 transition-colors"
+              className="px-8 py-4 rounded-xl bg-transparent text-primary font-bold border border-primary/20 hover:bg-primary/10 transition-colors"
             >
               {translation.hero.contactMe}
             </a>
@@ -76,15 +65,15 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.8, rotateY: 15 }}
           animate={{ opacity: 1, scale: 1, rotateY: 0 }}
           transition={{ delay: 0.4, duration: 1, type: "spring" }}
-          className="relative w-full aspect-square max-w-lg mx-auto lg:ml-auto"
+          className="relative w-full aspect-square max-w-md mx-auto lg:ml-auto"
         >
           <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-purple-500/20 rounded-full blur-[80px] -z-10" />
           <motion.img 
-            animate={{ y: [0, -15, 0] }}
+            animate={{ y: [0, 15, 0] }}
             transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-            src={`${import.meta.env.BASE_URL}images/hero-3d-laptop.png`}
+            src={`${import.meta.env.BASE_URL}images/profile-picture.png`}
             alt="3D Developer Setup" 
-            className="w-full h-full object-contain relative z-10 drop-shadow-2xl"
+            className="w-full h-full object-contain relative z-10 drop-shadow-2xl  rounded-lg"
           />
         </motion.div>
       </div>

@@ -15,7 +15,7 @@ export function Experience() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-5xl font-display font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-5xl font-display font-bold text-foreground mb-4">
             {translation.nav.experience}
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
@@ -41,8 +41,8 @@ export function Experience() {
 
               <div className={`md:w-1/2 flex flex-col ${index % 2 === 0 ? 'md:pr-16 md:ml-0 md:items-end md:text-right' : 'md:pl-16 md:ml-auto md:items-start md:text-left'}`}>
                 <span className="text-primary font-mono text-sm mb-2 block">{exp.period}</span>
-                <h3 className="text-2xl font-bold text-white mb-1">{exp.role}</h3>
-                <h4 className="text-lg font-medium text-gray-400 mb-4">{exp.company}</h4>
+                <h3 className="text-2xl font-bold text-foreground mb-1">{exp.role}</h3>
+                <h4 className="text-lg font-medium text-muted-foreground mb-4">{exp.company}</h4>
                 <div className="glass-panel p-6 rounded-2xl text-muted-foreground w-full text-justify">
                   {exp.description}
                 </div>

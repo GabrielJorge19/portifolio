@@ -11,7 +11,7 @@ export default function AutomacaoWeb() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/30 selection:text-white">
+    <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/30 selection:text-primary-foreground">
       <Navbar />
       <main className="pt-28">
         <section className="py-20">
@@ -23,7 +23,7 @@ export default function AutomacaoWeb() {
                     <ShieldCheck size={16} />
                     Apresentação do Sistema
                   </span>
-                  <h1 className="text-4xl sm:text-5xl font-display font-black text-white leading-tight">
+                  <h1 className="text-4xl sm:text-5xl font-display font-black text-foreground leading-tight">
                     OS Manager
                   </h1>
                   <p className="mt-6 text-lg text-muted-foreground leading-8">
@@ -47,13 +47,6 @@ export default function AutomacaoWeb() {
 
         <section className="py-20 border-t border-white/5">
           <div className="max-w-6xl mx-auto px-6 grid gap-12 lg:grid-cols-[1fr_0.85fr] items-start">
-            <div className="space-y-6">
-              <span className="text-primary font-mono text-sm uppercase tracking-[0.3em]">Visão Geral</span>
-              <h2 className="text-3xl sm:text-4xl font-display font-bold text-white">O sistema em poucas palavras</h2>
-              <p className="text-muted-foreground leading-8">
-                O OS Manager é uma solução desktop pensada para automatizar completamente o processo de criação de ordens de serviço no SMGI Max, reduzindo o tempo gasto em tarefas repetitivas e eliminando riscos de falhas humanas. A arquitetura combina front-end moderno com automação via Playwright no Electron, permitindo uma experiência robusta para o usuário.
-              </p>
-            </div>
             <div className="grid gap-4">
               {[
                 {
@@ -73,7 +66,7 @@ export default function AutomacaoWeb() {
                 }
               ].map((item) => (
                 <div key={item.title} className="glass-panel p-6 rounded-3xl border border-white/5">
-                  <div className="flex items-center gap-3 mb-4 text-sm font-semibold text-white">
+                  <div className="flex items-center gap-3 mb-4 text-sm font-semibold text-foreground">
                     {item.icon}
                     {item.title}
                   </div>
@@ -89,7 +82,7 @@ export default function AutomacaoWeb() {
             <div className="glass-panel p-10 rounded-[2rem] border border-white/5">
               <div className="grid gap-8 lg:grid-cols-2">
                 <div>
-                  <h3 className="text-2xl font-display font-bold text-white mb-4">Como Funciona</h3>
+                  <h3 className="text-2xl font-display font-bold text-foreground mb-4">Como Funciona</h3>
                   <div className="space-y-4 text-muted-foreground leading-7">
                     <p>O fluxo do OS Manager simplifica o ciclo de criação de ordens de serviço em etapas claras:</p>
                     <ol className="list-decimal list-inside space-y-3">
@@ -102,7 +95,7 @@ export default function AutomacaoWeb() {
                   </div>
                 </div>
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-display font-bold text-white mb-4">Funcionalidades Principais</h3>
+                  <h3 className="text-2xl font-display font-bold text-foreground mb-4">Funcionalidades Principais</h3>
                   <ul className="grid gap-4 text-muted-foreground leading-7">
                     <li>Criação automática de ordens de serviço com feedback visual.</li>
                     <li>Acompanhamento do status: Pendente, Em Andamento e Concluído.</li>
@@ -125,7 +118,7 @@ export default function AutomacaoWeb() {
               className="mb-12"
             >
               <span className="text-primary font-mono text-sm uppercase tracking-[0.3em]">Demonstração</span>
-              <h2 className="text-3xl sm:text-4xl font-display font-bold text-white mt-3 mb-4">O sistema em ação</h2>
+              <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mt-3 mb-4">O sistema em ação</h2>
               <p className="text-muted-foreground leading-8 max-w-2xl">
                 Veja o OS Manager funcionando em tempo real, desde a importação dos dados até a conclusão da automação e exportação dos resultados.
               </p>
@@ -206,7 +199,7 @@ export default function AutomacaoWeb() {
             </div>
 
             <div className="glass-panel p-10 rounded-[2rem] border border-white/5">
-              <h3 className="text-2xl font-display font-bold text-white mb-6">Vídeo demonstrativo</h3>
+              <h3 className="text-2xl font-display font-bold text-foreground mb-6">Vídeo demonstrativo</h3>
               <div className="relative rounded-2xl overflow-hidden bg-black/40 border border-white/5">
                 <video
                   controls
@@ -229,7 +222,7 @@ export default function AutomacaoWeb() {
             <div className="grid gap-10 lg:grid-cols-3">
               <div className="glass-panel p-8 rounded-3xl border border-white/5">
                 <span className="text-primary uppercase tracking-[0.3em] text-xs mb-3 block">Arquitetura</span>
-                <h3 className="text-2xl font-display font-bold text-white mb-4">Camadas do projeto</h3>
+                <h3 className="text-2xl font-display font-bold text-foreground mb-4">Camadas do projeto</h3>
                 <p className="text-muted-foreground leading-7">
                   O sistema foi projetado em camadas para separar apresentação, execução e automação, garantindo manutenibilidade e desempenho consistente.
                 </p>
@@ -252,7 +245,7 @@ export default function AutomacaoWeb() {
         <section className="py-20">
           <div className="max-w-6xl mx-auto px-6">
             <div className="glass-panel p-10 rounded-[2rem] border border-white/5">
-              <h3 className="text-3xl font-display font-bold text-white mb-4">Performance e Benefícios</h3>
+              <h3 className="text-3xl font-display font-bold text-foreground mb-4">Performance e Benefícios</h3>
               <p className="text-muted-foreground leading-8 mb-6">
                 A solução apresenta ganhos de eficiência significativos em relação ao processo manual, com redução de tempo, eliminação de erros e maior consistência na criação de ordens de serviço.
               </p>
@@ -285,7 +278,7 @@ export default function AutomacaoWeb() {
               <div className="flex flex-col gap-6 lg:flex-row lg:justify-between lg:items-center">
                 <div>
                   <span className="text-primary uppercase tracking-[0.3em] text-xs">Próximo passo</span>
-                  <h3 className="text-3xl sm:text-4xl font-display font-bold text-white mt-3">Veja o projeto em ação</h3>
+                  <h3 className="text-3xl sm:text-4xl font-display font-bold text-foreground mt-3">Veja o projeto em ação</h3>
                   <p className="mt-4 text-muted-foreground leading-7">
                     Esta página apresenta as decisões principais do OS Manager e a proposta de valor do projeto, mantendo o mesmo padrão visual do portfólio pessoal.
                   </p>
