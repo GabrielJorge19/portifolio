@@ -20,6 +20,7 @@ export function Navbar() {
     { name: translation.nav.about, href: '/portifolio/#about' },
     { name: translation.nav.projects, href: '/portifolio/#projects' },
     { name: translation.nav.experience, href: '/portifolio/#experience' },
+    { name: translation.nav.education, href: '/portifolio/#education' },
     { name: translation.nav.contact, href: '/portifolio/#contact' },
   ];
 

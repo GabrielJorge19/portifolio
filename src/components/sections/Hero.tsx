@@ -71,7 +71,7 @@ export function Hero() {
           <motion.img 
             animate={{ y: [0, 15, 0] }}
             transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-            src={`${import.meta.env.BASE_URL}images/profile-picture.png`}
+            src={`${import.meta.env.BASE_URL}images/profile-picture-2.png`}
             alt="3D Developer Setup" 
             className="w-full h-full object-contain relative z-10 drop-shadow-2xl  rounded-lg"
           />

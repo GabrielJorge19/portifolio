@@ -7,6 +7,7 @@ export const translations = {
       skills: "Habilidades",
       projects: "Projetos",
       experience: "Experiências",
+      education: "Formação",
       contact: "Contato",
       cta: "Diga olá"
     },
@@ -51,7 +52,13 @@ export const translations = {
       role: "Gestor de contratos",
       company: "Cibam engenharia",
       description: `Coordenação operacional de contrato de manutenção com mais de 5.000 pontos de atendimento em São Paulo, liderando 10 equipes e cerca de 30 profissionais. Responsável pelo planejamento das atividades, gestão de recursos e acompanhamento de indicadores para garantir o cumprimento de metas e níveis de serviço. Atuação na organização de fluxos de trabalho, resolução de incidentes e desenvolvimento das equipes por meio de alinhamentos e feedbacks. Utilização de ferramentas digitais e dispositivos móveis para monitoramento das operações e melhoria contínua dos processos.`
+    }, {
+      period: "12/2020 - 07/2023",
+      role: "Auxiliar administrativo",
+      company: "BSG Serviços e Soluções",
+      description: "Atuei como auxiliar administrativo na BSG, onde rapidamente assumi responsabilidades na coordenação das atividades diárias de uma equipe de 30 colaboradores na manutenção de hidrantes urbanos. Em um time administrativo reduzido, liderei melhorias de processos e desenvolvi soluções tecnológicas que foram adotadas de forma ágil, otimizando a operação interna."
     },
+
       // {
       //   period: "08/2020 - Presente",
       //   role: "Desenvolvedor full-stack",
@@ -64,6 +71,33 @@ export const translations = {
       //       Atuação em todo o ciclo de desenvolvimento: arquitetura, testes e deploy.`,
       // }
     ],
+    education: {
+      title: "Formação acadêmica",
+      items: [
+        {
+          degree: "Engenharia da Computação – Universidade Virtual do Estado de São Paulo (UNIVESP)",
+          finish: "06/2023"
+        },
+        {
+          degree: "Técnico em Química – ETEC Tiquatira",
+          finish: "06/2017"
+        },
+        {
+          degree: "Mecânica de Usinagem – SENAI Roberto Simonsen",
+          finish: "12/2015"
+        }
+      ]
+    },
+    languages: {
+      title: "Idiomas",
+      items: [
+        {
+          name: "Inglês",
+          level: "Avançado",
+          details: "CCAA (4 anos, concluído em 12/2021)"
+        }
+      ]
+    },
     contact: {
       title: "Entre em contato",
       text: "Estou procurando novas oportunidades. Se você tem uma pergunta, uma proposta de projeto, ou apenas quer dizer olá, eu tentarei o meu melhor para te responder!",
@@ -80,6 +114,7 @@ export const translations = {
       skills: "Skills",
       projects: "Projects",
       experience: "Experiences",
+      education: "Education",
       contact: "Contact",
       cta: "Say Hello"
     },
@@ -124,7 +159,12 @@ export const translations = {
       role: "Contract manager",
       company: "Cibam engenharia",
       description: "Operational coordination of a maintenance contract with more than 5,000 service points in São Paulo, leading 10 teams and around 30 professionals. Responsible for activity planning, resource management, and monitoring of indicators to ensure the achievement of goals and service levels. Involved in organizing workflows, resolving incidents, and developing teams through alignment and feedback. Use of digital tools and mobile devices for monitoring operations and continuous process improvement."
-    },
+    }, {
+      period: "12/2020 - 07/2023",
+      role: "Administrative Assistant",
+      company: "BSG Serviços e Soluções",
+      description: "I worked as an administrative assistant at BSG, where I quickly took on responsibilities coordinating the daily activities of a 30-person team focused on urban hydrant maintenance. In a small administrative team, I led process improvements and developed technological solutions that were rapidly adopted, streamlining internal operations."
+    }
       // {
       //   period: "08/2020 - Present",
       //   role: "Developer full-stack",
@@ -132,6 +172,33 @@ export const translations = {
       //   description: "Developed and maintained highly responsive marketing sites and eCommerce platforms."
       // }
     ],
+    education: {
+      title: "Education",
+      items: [
+        {
+          degree: "Computer Engineering – Virtual University of the State of São Paulo (UNIVESP)",
+          finish: "06/2023"
+        },
+        {
+          degree: "Technical Degree in Chemistry – ETEC Tiquatira",
+          finish: "06/2017"
+        },
+        {
+          degree: "Machining Mechanics – SENAI Roberto Simonsen",
+          finish: "12/2015"
+        }
+      ]
+    },
+    languages: {
+      title: "Languages",
+      items: [
+        {
+          name: "English",
+          level: "Advanced",
+          details: "CCAA (4 years, completed 12/2021)"
+        }
+      ]
+    },
     contact: {
       title: "Get in touch",
       text: "I'm currently looking for new opportunities. Whether you have a question, a project proposal, or just want to say hi, I'll try my best to get back to you!",
